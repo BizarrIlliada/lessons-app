@@ -1,5 +1,7 @@
 # lessons-app
 
+## [DEMO LINK](https://bizarrilliada.github.io/lessons-app/)
+
 ## Project setup
 ```
 npm install

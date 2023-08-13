@@ -1,30 +1,45 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <ElHeader>
+    <nav>
+      <router-link to="/lessons">
+        <ElButton>
+          Lessons
+        </ElButton>
+      </router-link>
+      <router-link to="/add-lesson">
+        <ElButton>
+          Add lesson
+        </ELButton>
+      </router-link>
+    </nav>
+  </ElHeader>
   <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+  import { defineComponent } from 'vue';
 
-nav {
-  padding: 30px;
+  import { ElHeader } from 'element-plus';
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  export default defineComponent({
+    name: 'App',
+    components: {
+      ElHeader,
+    },
+  });
+</script>
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<style scoped>
+  header {
+    height: 60px;
+    background-color: #defa9c;
   }
-}
+
+  nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 </style>
